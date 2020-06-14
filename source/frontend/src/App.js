@@ -12,7 +12,9 @@ class App extends Component {
       document.querySelector(".sidebar").classList.remove("open");
     }
 
+    const data= [];
     return (
+  
       <React.Fragment>
         <div className="grid-container">
           <header className="header">
@@ -21,11 +23,11 @@ class App extends Component {
                       &#9776;
                   </button>
 
-                  <a>amazon</a>
+                  <a href="#">amazon</a>
               </div>
               <div className="header-links">
-                  <a>Cart</a>
-                  <a>Sign in</a>
+                  <a href="#">Cart</a>
+                  <a href="#">Sign in</a>
               </div>
           </header>
           <aside className="sidebar">
@@ -44,70 +46,26 @@ class App extends Component {
           <main className="main">
             <div className="content">
                 <ul className="products">
+                  {
+                    data.products.map(product =>
+                      <li className="product">
+                        <img src={product.image} alt="test product" className="product-image"/>
+                        <div className="product-name">
+                          <a href="#">{product.name}</a>
+                          <div className="product-brand">{product.brand}</div>
+                          <div className="product-price">{product.price}$</div>
+                          <div className="product-reting">{product.retting} stars ({product.reviews} reviews)</div>
+                        </div>
+                      </li>
+
+                    )
+                  }
                   
                   
-                  <li className="product">
-                    <img src="/images/shirt.jpg" alt="test product" className="product-image"/>
-                    <div className="product-name">
-                      <a>Slim Shirt</a>
-                      <div className="product-brand">Nike</div>
-                      <div className="product-price">10$</div>
-                      <div className="product-reting">4.5 stars (100 reviews)</div>
-                    </div>
-                  </li>
+                  
 
 
-                  <li className="product">
-                    <img src="/images/shirt.jpg" alt="test product" className="product-image"/>
-                    <div className="product-name">
-                      <a>Slim Shirt</a>
-                      <div className="product-brand">Nike</div>
-                      <div className="product-price">10$</div>
-                      <div className="product-reting">4.5 stars (100 reviews)</div>
-                    </div>
-                  </li>
-
-                  <li className="product">
-                    <img src="/images/shirt.jpg" alt="test product" className="product-image"/>
-                    <div className="product-name">
-                      <a>Slim Shirt</a>
-                      <div className="product-brand">Nike</div>
-                      <div className="product-price">10$</div>
-                      <div className="product-reting">4.5 stars (100 reviews)</div>
-                    </div>
-                  </li>
-
-                  <li className="product">
-                    <img src="/images/shirt.jpg" alt="test product" className="product-image"/>
-                    <div className="product-name">
-                      <a>Slim Shirt</a>
-                      <div className="product-brand">Nike</div>
-                      <div className="product-price">10$</div>
-                      <div className="product-reting">4.5 stars (100 reviews)</div>
-                    </div>
-                  </li>
-
-
-
-                  <li className="product">
-                    <img src="/images/shirt.jpg" alt="test product" className="product-image"/>
-                    <div className="product-name">
-                      <a>Slim Shirt</a>
-                      <div className="product-brand">Nike</div>
-                      <div className="product-price">10$</div>
-                      <div className="product-reting">4.5 stars (100 reviews)</div>
-                    </div>
-                  </li>
-
-                  <li className="product">
-                    <img src="/images/shirt.jpg" alt="test product" className="product-image"/>
-                    <div className="product-name">
-                      <a>Slim Shirt</a>
-                      <div className="product-brand">Nike</div>
-                      <div className="product-price">10$</div>
-                      <div className="product-reting">4.5 stars (100 reviews)</div>
-                    </div>
-                  </li>
+                  
 
 
 

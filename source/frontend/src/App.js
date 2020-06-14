@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import data from './data';
 
 class App extends Component {
 
@@ -12,7 +13,6 @@ class App extends Component {
       document.querySelector(".sidebar").classList.remove("open");
     }
 
-    const data= [];
     return (
   
       <React.Fragment>
@@ -61,17 +61,7 @@ class App extends Component {
                     )
                   }
                   
-                  
-                  
-
-
-                  
-
-
-
-
-
-
+                
               </ul>
             </div>
           </main>

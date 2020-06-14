@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import data from './data';
+import { Route, Link } from 'react-router-dom';
+import HomeScreen from './Screens/HomeScreen';
+import ProductScreen from './Screens/ProductScreen';
 
 class App extends Component {
 
@@ -23,7 +25,7 @@ class App extends Component {
                       &#9776;
                   </button>
 
-                  <a href="#">amazon</a>
+                  <Link to="/">amazon</Link>
               </div>
               <div className="header-links">
                   <a href="#">Cart</a>
@@ -45,24 +47,9 @@ class App extends Component {
 
           <main className="main">
             <div className="content">
-                <ul className="products">
-                  {
-                    data.products.map(product =>
-                      <li className="product">
-                        <img src={product.image} alt="test product" className="product-image"/>
-                        <div className="product-name">
-                          <a href="#">{product.name}</a>
-                          <div className="product-brand">{product.brand}</div>
-                          <div className="product-price">{product.price}$</div>
-                          <div className="product-reting">{product.retting} stars ({product.reviews} reviews)</div>
-                        </div>
-                      </li>
-
-                    )
-                  }
-                  
+              <Route path="/product/:id" component={ProductScreen} />
+              <Route path="/" component={HomeScreen} exact />
                 
-              </ul>
             </div>
           </main>
 

@@ -1,4 +1,4 @@
-export default {
+const data = {
 	products: [
 	  {
 		_id: '1',
@@ -40,4 +40,8 @@ export default {
 		numReviews: 8
 	  },
 	]
+};
+
+module.exports = {
+	data
 }

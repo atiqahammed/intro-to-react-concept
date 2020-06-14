@@ -1,6 +1,5 @@
-import express from 'exppress';
-import data from './data';
-
+const express = require('express');
+const data = require('./data').data;
 
 const app = express();
 

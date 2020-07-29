@@ -10,6 +10,12 @@ export default class index extends Component {
 				<p>The main concept is that, instead of passing a child in the form of a component, we define a function that can receive parameters from the parent.</p>
 				<Link to='/function-as-component'>View</Link>
 
+				<hr/>
+
+				<h3>Memo</h3>
+				<p>The useMemo Hook lets you cache calculations between multiple renders by “remembering” the previous computation</p>
+				<Link to='/memo'>View</Link>
+
 
 			</Fragment>
 		)
